@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management & ICT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+        .snap-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .snap-container::-webkit-scrollbar { display: none; }
+        .snap-container { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 6px;
+            background-color: #F97316;
+            width: 0%;
+            z-index: 50;
+            transition: width 0.3s ease;
+        }
+        .nav-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 50;
+        }
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #D1D5DB;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .nav-dot:hover, .nav-dot.active {
+            background-color: #F97316;
+            transform: scale(1.3);
+        }
+        .slide-number {
+            position: absolute;
+            bottom: 24px;
+            right: 32px;
+            font-size: 0.875rem;
+            color: #6B7280;
+            font-weight: 500;
+            z-index: 40;
+        }
+        .dark-bg .slide-number { color: #9CA3AF; }
+        
+        .ted-quote {
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            line-height: 1.1;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased overflow-hidden">
+
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="nav-dots" id="navDots"></div>
+
+    <main class="snap-container" id="snapContainer">
+
+        <!-- SLIDE 01 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-1">
+            <div class="absolute inset-0 z-0">
+                <img src="images/tokyo_night_phone_1782943325819.jpg" alt="Tokyo Night" class="w-full h-full object-cover opacity-40">
+            </div>
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 fade-in-up">
+                <h1 class="ted-quote font-playfair font-bold text-white mb-6">The Phone That<br>Woke Me Up</h1>
+                <p class="text-gray-300 text-xl md:text-2xl mb-12 tracking-wide font-light">Tokyo, Japan · 1:00 AM</p>
+                <div class="max-w-4xl">
+                    <blockquote class="text-3xl md:text-4xl font-playfair italic text-[#F97316] leading-snug border-l-4 border-[#F97316] pl-6 mb-12">
+                        "What comes after an earthquake? For Japan — a tsunami warning. For Bangladesh — something that arrives every year, kills quietly, and still has no phone alert."
+                    </blockquote>
+                </div>
+            </div>
+            <div class="slide-number">01 / 15</div>
+        </section>
+
+        <!-- SLIDE 02 -->
+        <section class="snap-section w-full bg-white" id="slide-2">
+            <div class="flex flex-col lg:flex-row w-full h-full min-h-screen">
+                <div class="lg:w-1/3 flex items-center justify-center p-8 md:p-16 fade-in-up z-10">
+                    <div>
+                        <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-8 leading-tight">A Land the World Has Not Yet Discovered</h2>
+                        <div class="space-y-4 text-xl text-[#6B7280]">
+                            <p><strong>170 Million</strong> People</p>
+                            <p><strong>700+</strong> Rivers</p>
+                            <p><strong>8th</strong> Most Climate-Vulnerable Nation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-2 h-full max-h-screen overflow-hidden">
+                    <img src="images/sundarbans.jpg" alt="Sundarbans" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition duration-700">
+                    <img src="images/coxs_bazar.jpg" alt="Cox's Bazar" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition duration-700">
+                    <img src="images/chittagong_hills.jpg" alt="Chittagong Hills" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition duration-700">
+                    <img src="images/sajek_valley.jpg" alt="Sajek Valley" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition duration-700">
+                </div>
+            </div>
+            <div class="slide-number">02 / 15</div>
+        </section>
+
+        <!-- SLIDE 03 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-3">
+            <div class="absolute inset-0 z-0">
+                <img src="images/bangladesh_flood_aerial_1782943333568.jpg" alt="Aerial Flooding" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 mt-auto mb-24 fade-in-up text-center">
+                <h2 class="ted-quote font-playfair font-bold text-white mb-6">Every Year, Bangladesh Drowns</h2>
+                <p class="text-gray-200 text-2xl max-w-4xl mx-auto font-light leading-relaxed">Monsoon season is not a weather event here. It is a way of life. And climate change is making it catastrophic.</p>
+            </div>
+            <div class="slide-number">03 / 15</div>
+        </section>
+
+        <!-- SLIDE 04 -->
+        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-4">
+            <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold text-white mb-16 text-center">The Numbers That Don't Make the News</h2>
+                <p class="text-center text-[#F97316] text-xl tracking-widest uppercase mb-12">August 2024</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center p-8">
+                        <p class="text-6xl font-bold text-white mb-4"><span class="count-up" data-target="5.8" data-decimals="1">0</span>M</p>
+                        <p class="text-gray-400 text-xl">People affected</p>
+                    </div>
+                    <div class="text-center p-8">
+                        <p class="text-6xl font-bold text-white mb-4"><span class="count-up" data-target="502501">0</span></p>
+                        <p class="text-gray-400 text-xl">People displaced</p>
+                    </div>
+                    <div class="text-center p-8">
+                        <p class="text-6xl font-bold text-white mb-4">$<span class="count-up" data-target="457">0</span>M</p>
+                        <p class="text-gray-400 text-xl">Economic damage</p>
+                    </div>
+                    <div class="text-center p-8">
+                        <p class="text-6xl font-bold text-white mb-4"><span class="count-up" data-target="339000">0</span> ha</p>
+                        <p class="text-gray-400 text-xl">Crops destroyed</p>
+                    </div>
+                    <div class="text-center p-8">
+                        <p class="text-6xl font-bold text-white mb-4"><span class="count-up" data-target="7000">0</span></p>
+                        <p class="text-gray-400 text-xl">Schools closed</p>
+                    </div>
+                    <div class="text-center p-8 border border-[#F97316]/30 bg-[#F97316]/10 rounded-2xl">
+                        <p class="text-6xl font-bold text-[#F97316] mb-4"><span class="count-up" data-target="99.3" data-decimals="1">0</span>%</p>
+                        <p class="text-[#FED7AA] text-xl">Survivors with livelihood disruption</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">04 / 15</div>
+        </section>
+
+        <!-- SLIDE 05: NEW SLIDE (GROUND REALITY) -->
+        <section class="snap-section w-full bg-white" id="slide-5">
+            <div class="w-full min-h-screen flex flex-col fade-in-up">
+                <div class="px-6 sm:px-12 md:px-24 pt-16 pb-8">
+                    <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-4">The Ground Reality</h2>
+                    <p class="text-2xl text-[#6B7280] font-light">Vehicles paralyzed. Homes erased. Communities devastated.</p>
+                </div>
+                <div class="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-4 pb-16">
+                    <img src="images/flood_submerged_vehicles_1782944060481.jpg" alt="Submerged Vehicles" class="w-full h-full object-cover rounded-xl shadow-lg">
+                    <img src="images/flood_destroyed_houses_1782944069303.jpg" alt="Destroyed Houses" class="w-full h-full object-cover rounded-xl shadow-lg">
+                    <img src="images/family_rooftop_flood_1782943343597.jpg" alt="Family on Rooftop" class="w-full h-full object-cover rounded-xl shadow-lg">
+                </div>
+            </div>
+            <div class="slide-number">05 / 15</div>
+        </section>
+
+        <!-- SLIDE 06 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-6">
+            <div class="absolute inset-0 z-0">
+                <img src="images/flood_destruction_wide_1782944078350.jpg" alt="Wide Destruction" class="w-full h-full object-cover opacity-50">
+            </div>
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 flex items-center justify-center min-h-screen fade-in-up">
+                <div class="text-center">
+                    <h3 class="ted-quote font-playfair italic text-white leading-tight drop-shadow-2xl">
+                        "Floods don't just destroy homes.<br>
+                        <span class="text-[#F97316]">They destroy futures.</span>"
+                    </h3>
+                </div>
+            </div>
+            <div class="slide-number">06 / 15</div>
+        </section>
+
+        <!-- SLIDE 07 -->
+        <section class="snap-section w-full bg-white" id="slide-7">
+            <div class="flex flex-col md:flex-row w-full min-h-screen items-center">
+                <div class="md:w-1/2 h-64 md:h-full w-full">
+                    <img src="images/students_relief_truck_1782943351895.jpg" alt="Relief Effort" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-12 md:p-24 fade-in-up">
+                    <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-12 leading-tight">We Had the Will.<br>We Didn't Have the System.</h2>
+                    <ul class="space-y-8 text-2xl text-[#1A1A1A] font-light">
+                        <li class="flex items-start gap-4">
+                            <span class="text-[#F97316] font-bold">—</span> No needs mapping
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-[#F97316] font-bold">—</span> No direct fund transfer
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-[#F97316] font-bold">—</span> No distribution accountability
+                        </li>
+                    </ul>
+                    <div class="mt-16 bg-[#FFF7ED] p-8 border-l-4 border-[#F97316]">
+                        <p class="text-xl italic font-serif text-[#1A1A1A]">"The compassion of 170 million Bangladeshis is not the problem. The missing system is."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">07 / 15</div>
+        </section>
+
+        <!-- SLIDE 08 -->
+        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-8">
+            <div class="flex flex-col md:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
+                <div class="md:w-1/2 flex justify-center fade-in-up">
+                    <img src="images/j_alert_screen_1782943398857.jpg" alt="J-Alert" class="w-full max-w-sm rounded-[2rem] shadow-2xl ring-8 ring-[#F97316]/20">
+                </div>
+                <div class="md:w-1/2 fade-in-up delay-200">
+                    <h2 class="text-5xl md:text-6xl font-playfair font-bold text-white mb-12">The Phone That Saves Lives</h2>
+                    <p class="text-gray-300 text-2xl font-light mb-12 leading-relaxed">In Japan, warnings reach citizens in under 10 seconds. Trains brake. Factories stop. Sirens sound.</p>
+                    
+                    <div class="grid grid-cols-2 gap-8 text-white border-t border-gray-700 pt-8">
+                        <div>
+                            <p class="text-[#F97316] text-sm tracking-widest uppercase mb-2">Japan (J-Alert)</p>
+                            <p class="text-xl font-medium">97% reduction in deaths</p>
+                            <p class="text-gray-400 mt-2">Automated, instant</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm tracking-widest uppercase mb-2">Bangladesh (2024)</p>
+                            <p class="text-xl font-medium">$457M in losses</p>
+                            <p class="text-gray-400 mt-2">Manual, inconsistent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">08 / 15</div>
+        </section>
+
+        <!-- SLIDE 09 -->
+        <section class="snap-section w-full bg-white" id="slide-9">
+            <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
+                <h2 class="ted-quote font-playfair font-bold text-[#1A1A1A] text-center mb-16">Technology Alone Is Not Enough</h2>
+                
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="images/bosai_drill_1782943408428.jpg" alt="BOSAI Drill" class="w-full rounded-2xl shadow-xl">
+                    </div>
+                    <div class="lg:w-1/2 space-y-12">
+                        <div class="flex gap-6">
+                            <span class="text-5xl font-playfair font-bold text-[#F97316] opacity-30">01</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-[#1A1A1A] mb-2">People-Centric</h4>
+                                <p class="text-xl text-[#6B7280] font-light">Warnings must motivate action, not just deliver information.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="text-5xl font-playfair font-bold text-[#F97316] opacity-30">02</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-[#1A1A1A] mb-2">Redundancy</h4>
+                                <p class="text-xl text-[#6B7280] font-light">SMS, TV, Radio, Sirens. If one fails, others work.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="text-5xl font-playfair font-bold text-[#F97316] opacity-30">03</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-[#1A1A1A] mb-2">Community Ownership</h4>
+                                <p class="text-xl text-[#6B7280] font-light">Local preparedness enables faster response than waiting for the government.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">09 / 15</div>
+        </section>
+
+        <!-- SLIDE 10 -->
+        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-10">
+            <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-4 text-center">BD-Alert</h2>
+                <h3 class="text-2xl text-[#F97316] font-light mb-16 text-center">Japan's principle. Bangladesh's price point.</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-[#2A2A2A] p-10 rounded-3xl text-center">
+                        <div class="text-[#F97316] text-6xl font-light mb-6">01</div>
+                        <h4 class="text-3xl font-bold text-white mb-6">Detect</h4>
+                        <p class="text-gray-400 text-xl font-light leading-relaxed">IoT river-level sensors combined with free satellite imagery for real-time flood extent maps.</p>
+                    </div>
+                    <div class="bg-[#2A2A2A] p-10 rounded-3xl text-center">
+                        <div class="text-[#F97316] text-6xl font-light mb-6">02</div>
+                        <h4 class="text-3xl font-bold text-white mb-6">Predict</h4>
+                        <p class="text-gray-400 text-xl font-light leading-relaxed">LSTM deep learning model providing 72-hour advance prediction with district-level precision.</p>
+                    </div>
+                    <div class="bg-[#2A2A2A] p-10 rounded-3xl text-center">
+                        <div class="text-[#F97316] text-6xl font-light mb-6">03</div>
+                        <h4 class="text-3xl font-bold text-white mb-6">Alert</h4>
+                        <p class="text-gray-400 text-xl font-light leading-relaxed">SMS broadcast to 114 million mobile users. Works on basic 2G networks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">10 / 15</div>
+        </section>
+
+        <!-- SLIDE 11 -->
+        <section class="snap-section w-full bg-[#F9FAFB]" id="slide-11">
+            <div class="flex flex-col lg:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
+                <div class="lg:w-1/2 fade-in-up">
+                    <h2 class="text-5xl font-playfair font-bold text-[#1A1A1A] mb-12">The Architecture</h2>
+                    <div class="relative pl-10 space-y-8 before:absolute before:inset-0 before:ml-[19px] before:w-1 before:bg-[#F97316]">
+                        <div class="relative">
+                            <div class="absolute -left-12 h-6 w-6 rounded-full bg-[#F97316] ring-4 ring-white"></div>
+                            <h4 class="text-2xl font-bold text-[#1A1A1A]">Input</h4>
+                            <p class="text-xl text-[#6B7280] font-light">Sensors, Satellite & Transboundary Data</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-12 h-6 w-6 rounded-full bg-[#1A1A1A] ring-4 ring-white"></div>
+                            <h4 class="text-2xl font-bold text-[#1A1A1A]">Processing</h4>
+                            <p class="text-xl text-[#6B7280] font-light">LSTM Machine Learning Engine</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-12 h-6 w-6 rounded-full bg-[#F97316] ring-4 ring-white"></div>
+                            <h4 class="text-2xl font-bold text-[#1A1A1A]">Output</h4>
+                            <p class="text-xl text-[#6B7280] font-light">5-Level Risk Classification</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-12 h-6 w-6 rounded-full bg-[#1A1A1A] ring-4 ring-white"></div>
+                            <h4 class="text-2xl font-bold text-[#1A1A1A]">Action</h4>
+                            <p class="text-xl text-[#6B7280] font-light">SMS Broadcast & Anticipatory Cash (bKash)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 fade-in-up delay-200 bg-white p-10 rounded-3xl shadow-xl">
+                    <h4 class="text-2xl font-bold text-[#1A1A1A] mb-4 text-[#F97316]">Why SMS?</h4>
+                    <p class="text-xl text-[#6B7280] font-light leading-relaxed mb-8">In rural Bangladesh, internet is inconsistent. But 114 million people have mobile subscriptions. SMS works on 2G. It is the most resilient last-mile channel.</p>
+                    
+                    <h4 class="text-2xl font-bold text-[#1A1A1A] mb-4 text-[#F97316]">Anticipatory Finance</h4>
+                    <p class="text-xl text-[#6B7280] font-light leading-relaxed">When the model predicts Level 4 risk, mobile money transfers are automatically triggered to registered households before the flood peaks.</p>
+                </div>
+            </div>
+            <div class="slide-number">11 / 15</div>
+        </section>
+
+        <!-- SLIDE 12 -->
+        <section class="snap-section w-full bg-white" id="slide-12">
+            <div class="flex flex-col lg:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
+                <div class="lg:w-1/3 fade-in-up flex flex-col items-center">
+                    <img src="images/app_ui_mockup_1782943368227.jpg" alt="App UI Mockup" class="w-full max-w-sm rounded-[2.5rem] shadow-2xl mb-8 border-[8px] border-gray-100">
+                </div>
+                <div class="lg:w-2/3 fade-in-up delay-200">
+                    <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-4">BondhuHaat</h2>
+                    <p class="text-2xl text-[#F97316] font-light mb-12">A digital flood relief coordination platform</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-[#1A1A1A] mb-2 uppercase tracking-wide">Needs Mapping</h4>
+                            <p class="text-lg text-[#6B7280] font-light">Register vulnerable households 72 hours before flood. Linked to BD-Alert predictions.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#1A1A1A] mb-2 uppercase tracking-wide">Direct Transfer</h4>
+                            <p class="text-lg text-[#6B7280] font-light">Send money via bKash directly to families. No middlemen. No cash handled.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#1A1A1A] mb-2 uppercase tracking-wide">Supply Matching</h4>
+                            <p class="text-lg text-[#6B7280] font-light">Match bulk donors with verified NGOs to prevent oversupply and shortages.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#1A1A1A] mb-2 uppercase tracking-wide">Open Dashboard</h4>
+                            <p class="text-lg text-[#6B7280] font-light">Public real-time dashboard of total funds transferred and delivery status.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">12 / 15</div>
+        </section>
+
+        <!-- SLIDE 13 -->
+        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-13">
+            <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up items-center">
+                <img src="images/sdg_wheel_1782943418530.jpg" alt="SDG Wheel" class="w-48 h-48 rounded-full shadow-2xl mb-12">
+                <h2 class="text-5xl font-playfair font-bold text-white mb-16 text-center">Aligned with the Global Goals</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-5xl">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">01</div>
+                        <div class="w-12 h-1 bg-[#E5243B] mx-auto mb-4"></div>
+                        <p class="text-gray-400">No Poverty</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">02</div>
+                        <div class="w-12 h-1 bg-[#DDA63A] mx-auto mb-4"></div>
+                        <p class="text-gray-400">Zero Hunger</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#F97316] mb-2">13</div>
+                        <div class="w-12 h-1 bg-[#3F7E44] mx-auto mb-4"></div>
+                        <p class="text-[#F97316] font-bold">Climate Action</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">17</div>
+                        <div class="w-12 h-1 bg-[#19486A] mx-auto mb-4"></div>
+                        <p class="text-gray-400">Partnerships</p>
+                    </div>
+                </div>
+                
+                <p class="text-2xl text-gray-300 font-light text-center mt-16 max-w-3xl">
+                    Bangladesh contributes 0.4% of global emissions but ranks 9th in climate vulnerability. ICT-enabled early warning is the most cost-effective path to Target 13.1.
+                </p>
+            </div>
+            <div class="slide-number">13 / 15</div>
+        </section>
+
+        <!-- SLIDE 14 -->
+        <section class="snap-section w-full bg-white relative" id="slide-14">
+            <div class="absolute inset-0 z-0 h-1/2 opacity-20" style="background-image: url('images/hopeful_children_1782943378881.jpg'); background-size: cover; background-position: center bottom;"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-white z-0"></div>
+            
+            <div class="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen z-10 fade-in-up">
+                <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-20 text-center">The Roadmap</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="border-t-4 border-[#1A1A1A] pt-8">
+                        <h3 class="text-2xl font-bold text-[#1A1A1A] mb-4">Phase 1: Pilot</h3>
+                        <p class="text-xl text-[#6B7280] font-light leading-relaxed mb-4">Deploy IoT sensors on 10 rivers. Train model. Run BondhuHaat pilot in 2 districts.</p>
+                        <p class="font-bold text-[#F97316]">$150,000</p>
+                    </div>
+                    <div class="border-t-4 border-[#F97316] pt-8">
+                        <h3 class="text-2xl font-bold text-[#1A1A1A] mb-4">Phase 2: Scale</h3>
+                        <p class="text-xl text-[#6B7280] font-light leading-relaxed">Expand to 50 rivers. Integrate transboundary feed. Scale BondhuHaat nationally.</p>
+                    </div>
+                    <div class="border-t-4 border-gray-300 pt-8">
+                        <h3 class="text-2xl font-bold text-[#1A1A1A] mb-4">Phase 3: Sustain</h3>
+                        <p class="text-xl text-[#6B7280] font-light leading-relaxed">Integrate into official FFWC system. Export model to other LDCs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">14 / 15</div>
+        </section>
+
+        <!-- SLIDE 15 -->
+        <section class="snap-section w-full bg-black dark-bg flex flex-col min-h-screen relative" id="slide-15">
+            <div class="flex flex-col md:flex-row h-[70vh] w-full relative">
+                <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/20 z-20 hidden md:block transform -translate-x-1/2"></div>
+                
+                <!-- Left: Japan -->
+                <div class="w-full md:w-1/2 h-full bg-[#1C1C1E] flex flex-col items-center justify-center relative p-8 fade-in-up">
+                    <div class="z-10 text-center">
+                        <h3 class="text-4xl font-playfair font-bold text-white mb-8">Tokyo</h3>
+                        <div class="w-56 h-96 bg-red-600 rounded-3xl border-[8px] border-black flex items-center justify-center p-6 shadow-2xl mx-auto">
+                            <p class="text-white font-bold text-xl leading-tight text-center uppercase tracking-widest">Earthquake<br>Warning</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bangladesh -->
+                <div class="w-full md:w-1/2 h-full bg-[#F97316] flex flex-col items-center justify-center relative p-8 fade-in-up delay-200">
+                    <div class="z-10 text-center">
+                        <h3 class="text-4xl font-playfair font-bold text-[#1A1A1A] mb-8">Feni</h3>
+                        <div class="w-56 h-96 bg-white rounded-3xl border-[8px] border-black flex items-center justify-center p-0 shadow-2xl mx-auto overflow-hidden relative">
+                            <img src="images/phone_sms_alert_1782943360140.jpg" class="absolute inset-0 w-full h-full object-cover" alt="SMS Alert">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-grow bg-white w-full px-6 py-12 flex flex-col justify-center items-center text-center fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-[#1A1A1A] mb-8">Disasters don't wait.</h2>
+                <p class="text-2xl font-bold text-[#F97316] mb-6 tracking-wide">Thanks for listening.</p>
+            </div>
+            <div class="slide-number">15 / 15</div>
+        </section>
+
+    </main>
+
+    <script>
+        const totalSlides = 15;
+        const snapContainer = document.getElementById('snapContainer');
+        const progressBar = document.getElementById('progressBar');
+        const navDotsContainer = document.getElementById('navDots');
+        
+        for(let i=1; i<=totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            dot.dataset.slide = i;
+            dot.onclick = () => {
+                document.getElementById('slide-'+i).scrollIntoView({ behavior: 'smooth' });
+            };
+            navDotsContainer.appendChild(dot);
+        }
+        const dots = document.querySelectorAll('.nav-dot');
+
+        snapContainer.addEventListener('scroll', () => {
+            const scrollPos = snapContainer.scrollTop;
+            const scrollHeight = snapContainer.scrollHeight - snapContainer.clientHeight;
+            const progress = (scrollPos / scrollHeight) * 100;
+            progressBar.style.width = progress + '%';
+
+            const slideHeight = snapContainer.clientHeight;
+            const currentSlideIndex = Math.round(scrollPos / slideHeight);
+            
+            dots.forEach((dot, index) => {
+                if(index === currentSlideIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        dots[0].classList.add('active');
+
+        const animateElements = document.querySelectorAll('.fade-in-up');
+        const counterElements = document.querySelectorAll('.count-up');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    const countersInView = entry.target.querySelectorAll('.count-up');
+                    countersInView.forEach(counter => {
+                        if(!counter.classList.contains('counted')) {
+                            const target = parseFloat(counter.getAttribute('data-target'));
+                            const decimals = counter.getAttribute('data-decimals') ? parseInt(counter.getAttribute('data-decimals')) : 0;
+                            const duration = 2000; 
+                            const stepTime = 20; 
+                            const steps = duration / stepTime;
+                            const increment = target / steps;
+                            let current = 0;
+                            
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if(current >= target) {
+                                    counter.innerText = target.toFixed(decimals);
+                                    clearInterval(timer);
+                                    counter.classList.add('counted');
+                                } else {
+                                    counter.innerText = current.toFixed(decimals);
+                                }
+                            }, stepTime);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.15 });
+
+        animateElements.forEach(el => observer.observe(el));
+        counterElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

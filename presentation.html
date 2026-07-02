@@ -90,25 +90,74 @@
 
     <main class="snap-container" id="snapContainer">
 
-        <!-- SLIDE 01 -->
+        <!-- SLIDE 01 (The Hook) -->
         <section class="snap-section w-full bg-black dark-bg" id="slide-1">
             <div class="absolute inset-0 z-0">
-                <img src="images/tokyo_night_phone_1782943325819.jpg" alt="Tokyo Night" class="w-full h-full object-cover opacity-40">
+                <img src="images/tokyo_night_phone_1782943325819.jpg" alt="Tokyo Night" class="w-full h-full object-cover opacity-50">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60"></div>
             </div>
-            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 fade-in-up">
-                <h1 class="ted-quote font-playfair font-bold text-white mb-6">The Phone That<br>Woke Me Up</h1>
-                <p class="text-gray-300 text-xl md:text-2xl mb-12 tracking-wide font-light">Tokyo, Japan · 1:00 AM</p>
-                <div class="max-w-4xl">
-                    <blockquote class="text-3xl md:text-4xl font-playfair italic text-[#F97316] leading-snug border-l-4 border-[#F97316] pl-6 mb-12">
-                        "What comes after an earthquake? For Japan — a tsunami warning. For Bangladesh — something that arrives every year, kills quietly, and still has no phone alert."
-                    </blockquote>
-                </div>
+            <div class="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 fade-in-up">
+                <h1 class="text-7xl md:text-9xl font-playfair font-bold text-white tracking-wider mb-8 drop-shadow-2xl">1:00 AM.<br>Tokyo.</h1>
+                <p class="text-2xl md:text-3xl text-gray-300 font-light tracking-wide max-w-2xl mt-12 leading-relaxed opacity-90">An earthquake strikes. My phone screams with a warning.</p>
             </div>
-            <div class="slide-number">01 / 15</div>
+            <div class="slide-number">01 / 19</div>
         </section>
 
-        <!-- SLIDE 02 -->
-        <section class="snap-section w-full bg-white" id="slide-2">
+        
+        <!-- SLIDE 02 (Venezuela Hook) -->
+        <section class="snap-section w-full bg-[#0A0A0A] dark-bg !block h-screen" id="slide-2">
+            <div class="flex flex-col md:flex-row h-full w-full">
+                <div class="w-full md:w-1/2 h-1/2 md:h-full relative bg-[#111]">
+                    <img src="images/venezuella_earth_news_article.png" alt="Venezuela News" class="absolute inset-0 w-full h-full object-contain p-8">
+                </div>
+                <div class="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center px-12 md:px-24 bg-[#0A0A0A] relative z-20 fade-in-up">
+                    <h2 class="text-6xl md:text-8xl font-playfair font-bold text-white leading-tight mb-8">Venezuela.</h2>
+                    <p class="text-2xl text-gray-400 font-light mb-8">A massive earthquake strikes. Buildings crumble into rubble.</p>
+                    <div class="w-24 h-[2px] bg-[#F97316] mb-8"></div>
+                    <p class="text-4xl md:text-5xl font-playfair italic text-white leading-tight">"But the phones<br>stayed silent."</p>
+                </div>
+            </div>
+            <div class="slide-number">02 / 19</div>
+        </section>
+
+        <!-- SLIDE 03 (The Pivot) -->
+        <section class="snap-section w-full bg-[#0A0A0A] dark-bg flex flex-col items-center justify-center" id="slide-3">
+            <div class="relative z-10 w-full max-w-5xl mx-auto px-6 text-center space-y-16 fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-playfair italic text-white leading-tight">"In Japan, a disaster <br>announces itself."</h2>
+                <div class="fade-in-up delay-300">
+                    <div class="w-24 h-[1px] bg-gray-700 mx-auto mb-16"></div>
+                    <h2 class="text-5xl md:text-7xl font-playfair font-bold text-[#F97316] leading-tight">In Bangladesh, <br>it arrives in silence.</h2>
+                </div>
+            </div>
+            <div class="slide-number">03 / 19</div>
+        </section>
+
+        <!-- SLIDE 04 (The Nature of Threat) -->
+        <section class="snap-section w-full bg-[#1A1A1A] dark-bg !block h-screen" id="slide-4">
+            <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Left: Tsunami -->
+                <div class="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden group bg-black">
+                    <img src="images/devastating_tsunami_1782949157716.jpg" alt="Tsunami" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition duration-1000 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8 fade-in-up z-10 pointer-events-none">
+                        <h3 class="text-6xl md:text-8xl font-playfair font-bold text-white mb-6 tracking-widest uppercase drop-shadow-2xl">Seconds</h3>
+                        <p class="text-2xl text-gray-300 font-light tracking-wide drop-shadow-md">The timeline of a Tsunami</p>
+                    </div>
+                </div>
+                
+                <!-- Right: Flood -->
+                <div class="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden group bg-black">
+                    <img src="images/modern_city_flood_1782949713739.jpg" alt="City Flood" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition duration-1000 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8 fade-in-up delay-200 z-10 pointer-events-none">
+                        <h3 class="text-6xl md:text-8xl font-playfair font-bold text-[#F97316] mb-6 tracking-widest uppercase drop-shadow-2xl">Months</h3>
+                        <p class="text-2xl text-gray-300 font-light tracking-wide drop-shadow-md">The timeline of a Flood</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">04 / 19</div>
+        </section>
+
+        <!-- SLIDE 05 -->
+        <section class="snap-section w-full bg-white" id="slide-5">
             <div class="flex flex-col lg:flex-row w-full h-full min-h-screen">
                 <div class="lg:w-1/3 flex items-center justify-center p-8 md:p-16 fade-in-up z-10">
                     <div>
@@ -127,11 +176,11 @@
                     <img src="images/sajek_valley.jpg" alt="Sajek Valley" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition duration-700">
                 </div>
             </div>
-            <div class="slide-number">02 / 15</div>
+            <div class="slide-number">05 / 19</div>
         </section>
 
-        <!-- SLIDE 03 -->
-        <section class="snap-section w-full bg-black dark-bg" id="slide-3">
+        <!-- SLIDE 06 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-6">
             <div class="absolute inset-0 z-0">
                 <img src="images/bangladesh_flood_aerial_1782943333568.jpg" alt="Aerial Flooding" class="w-full h-full object-cover opacity-60">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -140,11 +189,11 @@
                 <h2 class="ted-quote font-playfair font-bold text-white mb-6">Every Year, Bangladesh Drowns</h2>
                 <p class="text-gray-200 text-2xl max-w-4xl mx-auto font-light leading-relaxed">Monsoon season is not a weather event here. It is a way of life. And climate change is making it catastrophic.</p>
             </div>
-            <div class="slide-number">03 / 15</div>
+            <div class="slide-number">06 / 19</div>
         </section>
 
-        <!-- SLIDE 04 -->
-        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-4">
+        <!-- SLIDE 07 -->
+        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-7">
             <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
                 <h2 class="text-5xl md:text-6xl font-playfair font-bold text-white mb-16 text-center">The Numbers That Don't Make the News</h2>
                 <p class="text-center text-[#F97316] text-xl tracking-widest uppercase mb-12">August 2024</p>
@@ -176,11 +225,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">04 / 15</div>
+            <div class="slide-number">07 / 19</div>
         </section>
 
-        <!-- SLIDE 05: NEW SLIDE (GROUND REALITY) -->
-        <section class="snap-section w-full bg-white" id="slide-5">
+        <!-- SLIDE 08 -->
+        <section class="snap-section w-full bg-white" id="slide-8">
             <div class="w-full min-h-screen flex flex-col fade-in-up">
                 <div class="px-6 sm:px-12 md:px-24 pt-16 pb-8">
                     <h2 class="text-5xl md:text-6xl font-playfair font-bold text-[#1A1A1A] mb-4">The Ground Reality</h2>
@@ -192,11 +241,11 @@
                     <img src="images/family_rooftop_flood_1782943343597.jpg" alt="Family on Rooftop" class="w-full h-full object-cover rounded-xl shadow-lg">
                 </div>
             </div>
-            <div class="slide-number">05 / 15</div>
+            <div class="slide-number">08 / 19</div>
         </section>
 
-        <!-- SLIDE 06 -->
-        <section class="snap-section w-full bg-black dark-bg" id="slide-6">
+        <!-- SLIDE 09 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-9">
             <div class="absolute inset-0 z-0">
                 <img src="images/flood_destruction_wide_1782944078350.jpg" alt="Wide Destruction" class="w-full h-full object-cover opacity-50">
             </div>
@@ -208,11 +257,11 @@
                     </h3>
                 </div>
             </div>
-            <div class="slide-number">06 / 15</div>
+            <div class="slide-number">09 / 19</div>
         </section>
 
-        <!-- SLIDE 07 -->
-        <section class="snap-section w-full bg-white" id="slide-7">
+        <!-- SLIDE 10 -->
+        <section class="snap-section w-full bg-white" id="slide-10">
             <div class="flex flex-col md:flex-row w-full min-h-screen items-center">
                 <div class="md:w-1/2 h-64 md:h-full w-full">
                     <img src="images/students_relief_truck_1782943351895.jpg" alt="Relief Effort" class="w-full h-full object-cover">
@@ -235,11 +284,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">07 / 15</div>
+            <div class="slide-number">10 / 19</div>
         </section>
 
-        <!-- SLIDE 08 -->
-        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-8">
+        <!-- SLIDE 11 -->
+        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-11">
             <div class="flex flex-col md:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
                 <div class="md:w-1/2 flex justify-center fade-in-up">
                     <img src="images/j_alert_screen_1782943398857.jpg" alt="J-Alert" class="w-full max-w-sm rounded-[2rem] shadow-2xl ring-8 ring-[#F97316]/20">
@@ -262,11 +311,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">08 / 15</div>
+            <div class="slide-number">11 / 19</div>
         </section>
 
-        <!-- SLIDE 09 -->
-        <section class="snap-section w-full bg-white" id="slide-9">
+        <!-- SLIDE 12 -->
+        <section class="snap-section w-full bg-white" id="slide-12">
             <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
                 <h2 class="ted-quote font-playfair font-bold text-[#1A1A1A] text-center mb-16">Technology Alone Is Not Enough</h2>
                 
@@ -299,14 +348,14 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">09 / 15</div>
+            <div class="slide-number">12 / 19</div>
         </section>
 
-        <!-- SLIDE 10 -->
-        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-10">
+        <!-- SLIDE 13 -->
+        <section class="snap-section w-full bg-[#1A1A1A] dark-bg" id="slide-13">
             <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up">
                 <h2 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-4 text-center">BD-Alert</h2>
-                <h3 class="text-2xl text-[#F97316] font-light mb-16 text-center">Japan's principle. Bangladesh's price point.</h3>
+                <h3 class="text-2xl text-[#F97316] font-light mb-16 text-center">The first intelligent early warning ecosystem built for the Global South.</h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-[#2A2A2A] p-10 rounded-3xl text-center">
@@ -326,11 +375,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">10 / 15</div>
+            <div class="slide-number">13 / 19</div>
         </section>
 
-        <!-- SLIDE 11 -->
-        <section class="snap-section w-full bg-[#F9FAFB]" id="slide-11">
+        <!-- SLIDE 14 -->
+        <section class="snap-section w-full bg-[#F9FAFB]" id="slide-14">
             <div class="flex flex-col lg:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
                 <div class="lg:w-1/2 fade-in-up">
                     <h2 class="text-5xl font-playfair font-bold text-[#1A1A1A] mb-12">The Architecture</h2>
@@ -365,11 +414,11 @@
                     <p class="text-xl text-[#6B7280] font-light leading-relaxed">When the model predicts Level 4 risk, mobile money transfers are automatically triggered to registered households before the flood peaks.</p>
                 </div>
             </div>
-            <div class="slide-number">11 / 15</div>
+            <div class="slide-number">14 / 19</div>
         </section>
 
-        <!-- SLIDE 12 -->
-        <section class="snap-section w-full bg-white" id="slide-12">
+        <!-- SLIDE 15 -->
+        <section class="snap-section w-full bg-white" id="slide-15">
             <div class="flex flex-col lg:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
                 <div class="lg:w-1/3 fade-in-up flex flex-col items-center">
                     <img src="images/app_ui_mockup_1782943368227.jpg" alt="App UI Mockup" class="w-full max-w-sm rounded-[2.5rem] shadow-2xl mb-8 border-[8px] border-gray-100">
@@ -398,11 +447,11 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">12 / 15</div>
+            <div class="slide-number">15 / 19</div>
         </section>
 
-        <!-- SLIDE 13 -->
-        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-13">
+        <!-- SLIDE 16 -->
+        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-16">
             <div class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 flex flex-col justify-center min-h-screen fade-in-up items-center">
                 <img src="images/sdg_wheel_1782943418530.jpg" alt="SDG Wheel" class="w-48 h-48 rounded-full shadow-2xl mb-12">
                 <h2 class="text-5xl font-playfair font-bold text-white mb-16 text-center">Aligned with the Global Goals</h2>
@@ -434,11 +483,11 @@
                     Bangladesh contributes 0.4% of global emissions but ranks 9th in climate vulnerability. ICT-enabled early warning is the most cost-effective path to Target 13.1.
                 </p>
             </div>
-            <div class="slide-number">13 / 15</div>
+            <div class="slide-number">16 / 19</div>
         </section>
 
-        <!-- SLIDE 14 -->
-        <section class="snap-section w-full bg-white relative" id="slide-14">
+        <!-- SLIDE 17 -->
+        <section class="snap-section w-full bg-white relative" id="slide-17">
             <div class="absolute inset-0 z-0 h-1/2 opacity-20" style="background-image: url('images/hopeful_children_1782943378881.jpg'); background-size: cover; background-position: center bottom;"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-white z-0"></div>
             
@@ -461,46 +510,78 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">14 / 15</div>
+            <div class="slide-number">17 / 19</div>
         </section>
 
-        <!-- SLIDE 15 -->
-        <section class="snap-section w-full bg-black dark-bg flex flex-col min-h-screen relative" id="slide-15">
-            <div class="flex flex-col md:flex-row h-[70vh] w-full relative">
-                <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/20 z-20 hidden md:block transform -translate-x-1/2"></div>
+        <!-- SLIDE 18 -->
+        <section class="snap-section w-full bg-[#1C1C1E] dark-bg" id="slide-18">
+            <div class="flex flex-col md:flex-row w-full max-w-7xl mx-auto min-h-screen items-center px-6 sm:px-12 py-16 gap-16">
+                <div class="md:w-1/2 flex justify-center fade-in-up">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-[#F97316] blur-3xl opacity-20 rounded-full"></div>
+                        <img src="images/phone_sms_alert_1782943360140.jpg" alt="SMS Alert" class="relative z-10 w-full max-w-sm rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gray-800">
+                    </div>
+                </div>
+                <div class="md:w-1/2 fade-in-up delay-200">
+                    <h2 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight">Built from the<br><span class="text-[#F97316]">ground up.</span></h2>
+                    <p class="text-gray-300 text-2xl font-light mb-12 leading-relaxed">This isn't an imported solution. It's a fundamentally novel architecture designed for the developing world.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-5">
+                            <div class="w-10 h-10 rounded-full bg-[#F97316]/20 flex items-center justify-center shrink-0 mt-1 border border-[#F97316]/50">
+                                <svg class="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-2">Resilient Architecture</h4>
+                                <p class="text-xl text-gray-400 font-light">Functions independently of internet outages via low-bandwidth SMS protocols.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <div class="w-10 h-10 rounded-full bg-[#F97316]/20 flex items-center justify-center shrink-0 mt-1 border border-[#F97316]/50">
+                                <svg class="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-2">Predictive Action</h4>
+                                <p class="text-xl text-gray-400 font-light">Doesn't just warn. Our AI triggers automated cash transfers exactly 72 hours before disaster peaks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">18 / 19</div>
+        </section>
+
+        <!-- SLIDE 19 -->
+        <section class="snap-section w-full bg-black dark-bg" id="slide-19">
+            <div class="absolute inset-0 z-0">
+                <img src="images/hopeful_children_1782943378881.jpg" alt="Hopeful Future" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-12 flex flex-col items-center justify-center min-h-screen text-center fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-playfair font-bold text-white leading-tight mb-12 drop-shadow-2xl">
+                    We cannot stop the floods.<br>
+                    <span class="text-[#F97316]">But we can stop the dying.</span>
+                </h2>
                 
-                <!-- Left: Japan -->
-                <div class="w-full md:w-1/2 h-full bg-[#1C1C1E] flex flex-col items-center justify-center relative p-8 fade-in-up">
-                    <div class="z-10 text-center">
-                        <h3 class="text-4xl font-playfair font-bold text-white mb-8">Tokyo</h3>
-                        <div class="w-56 h-96 bg-red-600 rounded-3xl border-[8px] border-black flex items-center justify-center p-6 shadow-2xl mx-auto">
-                            <p class="text-white font-bold text-xl leading-tight text-center uppercase tracking-widest">Earthquake<br>Warning</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-2xl md:text-3xl text-gray-200 font-light max-w-4xl mx-auto leading-relaxed mb-16 fade-in-up delay-200">
+                    If we can prove this works in the most climate-vulnerable country on Earth, we can scale this blueprint globally. We don't just save a nation...
+                </p>
 
-                <!-- Right: Bangladesh -->
-                <div class="w-full md:w-1/2 h-full bg-[#F97316] flex flex-col items-center justify-center relative p-8 fade-in-up delay-200">
-                    <div class="z-10 text-center">
-                        <h3 class="text-4xl font-playfair font-bold text-[#1A1A1A] mb-8">Feni</h3>
-                        <div class="w-56 h-96 bg-white rounded-3xl border-[8px] border-black flex items-center justify-center p-0 shadow-2xl mx-auto overflow-hidden relative">
-                            <img src="images/phone_sms_alert_1782943360140.jpg" class="absolute inset-0 w-full h-full object-cover" alt="SMS Alert">
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-4xl md:text-5xl font-playfair italic text-white mb-16 fade-in-up delay-300">
+                    "We make the world a better place."
+                </h3>
+                
+                <div class="w-16 h-[2px] bg-[#F97316] mb-12 fade-in-up delay-300"></div>
+                
+                <p class="text-2xl font-bold text-[#F97316] tracking-widest uppercase fade-in-up delay-300">Thanks for listening.</p>
             </div>
-
-            <div class="flex-grow bg-white w-full px-6 py-12 flex flex-col justify-center items-center text-center fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-[#1A1A1A] mb-8">Disasters don't wait.</h2>
-                <p class="text-2xl font-bold text-[#F97316] mb-6 tracking-wide">Thanks for listening.</p>
-            </div>
-            <div class="slide-number">15 / 15</div>
+            <div class="slide-number">19 / 19</div>
         </section>
 
     </main>
 
     <script>
-        const totalSlides = 15;
+        const totalSlides = 19;
         const snapContainer = document.getElementById('snapContainer');
         const progressBar = document.getElementById('progressBar');
         const navDotsContainer = document.getElementById('navDots');

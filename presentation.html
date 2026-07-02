@@ -654,6 +654,24 @@
 
         animateElements.forEach(el => observer.observe(el));
         counterElements.forEach(el => observer.observe(el));
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            const slideHeight = snapContainer.clientHeight;
+            const currentSlideIndex = Math.round(snapContainer.scrollTop / slideHeight);
+            
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) {
+                e.preventDefault();
+                if (currentSlideIndex < totalSlides - 1) {
+                    document.getElementById('slide-' + (currentSlideIndex + 2)).scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp' || (e.key === ' ' && e.shiftKey)) {
+                e.preventDefault();
+                if (currentSlideIndex > 0) {
+                    document.getElementById('slide-' + (currentSlideIndex)).scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
     </script>
 </body>
 </html>

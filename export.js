@@ -45,7 +45,7 @@ const path = require('path');
             width: '1920px',
             height: '1080px',
             margin: { top: 0, right: 0, bottom: 0, left: 0 },
-            pageRanges: '1-19'
+            pageRanges: '1-22'
         });
         
         console.log("PDF generated successfully: SDGs_ict_BD.pdf");
